@@ -5,7 +5,7 @@ JSON=/opt/ffmap-backend-neu/json/nodes.json
 
 echo -n "online nodes: "
 num="$(cat $JSON |jq '.nodes[] | select(.flags.gateway==false) | select(.flags.online==true)'|grep online|wc -l)"
-echo $num
+num=$(expr $num - 4)
 cd `dirname "$0"`
 sed 's/<NUM_NODES>/'$num'/g' numnodes.template > _site/numnodes.html
 
