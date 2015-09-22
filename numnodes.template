@@ -40,6 +40,6 @@ body{
 </head>
 <body><a href="http://mesh.ffki.de/" target="_blank">
 <div class="num"><NUM_NODES></div>
-<div class="onl">knoten online</div></a>
+<div class="onl">Knoten online</div></a>
 </body>
 </html>
