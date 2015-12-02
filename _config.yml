@@ -1,5 +1,7 @@
 url: http://freifunk.in-kiel.de/
 
+destination: _site
+
 community:
   # Metadata
   name: "Kiel"
