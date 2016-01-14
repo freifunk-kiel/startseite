@@ -9,8 +9,9 @@ FIRMWARE_VERSION = '0.7.1'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
+#FIRMWARE_MIRROR = 'http://gluon.ffki.de/firmware/stable/'
 #FIRMWARE_BASE = 'http://localhost/freifunk/firmware/ffki/0.7.1/'
-FIRMWARE_BASE = 'http://gluon.ffki.de/firmware/stable/'
+FIRMWARE_BASE = 'http://freifunk.in-kiel.de/ffki-firmware/latest/'
 FIRMWARE_MIRROR = 'http://freifunk.discovibration.de/firmware/firmware-0.7.1/'
 
 GROUPS = {

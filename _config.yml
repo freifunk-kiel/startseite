@@ -14,6 +14,7 @@ community:
   url_geomap: "http://map.freifunk.in-kiel.de/"
   url_graph: "http://graph.freifunk.in-kiel.de/"
   url_nodelist: "http://alfred.freifunk.in-kiel.de/"
+  url_meshviewer: "http://mesh.freifunk.in-kiel.de/"
 
   url_mailman: "http://lists.in-kiel.de/cgi-bin/mailman/listinfo/freifunk"
 
@@ -36,8 +37,9 @@ community:
 firmware:
   #base: "https://freifunk.in-kiel.de/firmware/stable/"
   #base: "http://localhost/freifunk/firmware/ffki/0.7.1/"
-  base: "http://gluon.ffki.de/firmware/stable/"
+  #base: "http://gluon.ffki.de/firmware/stable/"
   #base: "http://freifunk.discovibration.de/firmware/firmware-0.7.1/"
+  base: "http://freifunk.in-kiel.de/ffki-firmware/latest/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
