@@ -60,6 +60,7 @@ layout: base
 </div>
 
     {% for groups in site.firmwares %}
+    <a name="{{ groups[0] }}"></a>
     <h2>{{ groups[0] }}</h2>
     <table class="firmwarelist">
       <thead>
@@ -73,6 +74,7 @@ layout: base
         {% for model in groups[1] %}
         <tr>
           <td>
+            <a name="{{ groups[0] }}_{{ model[0] }}"></a>
             {{ model[0] }}
           </td>
           <td>
