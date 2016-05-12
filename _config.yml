@@ -21,9 +21,9 @@ community:
   url_firmware: "http://freifunk.in-kiel.de/firmware.html"
 
   # Mail Contacts
-  mail_info: "freifunk@in-kiel.de"
-  mail_keys: "freifunk-keys@in-kiel.de"
-  mail_discussion: "freifunk@in-kiel.de"
+  mail_info: "freifunk@lists.in-kiel.de"
+  mail_keys: "freifunk-keys@lists.in-kiel.de"
+  mail_discussion: "freifunk@lists.in-kiel.de"
 
   # Other Contacts
   #sip: ["space@sip.ffki"] # Optional
