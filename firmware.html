@@ -96,7 +96,7 @@ layout: base
             {% if fw[0] %}
             <strong>{{ fw[0] }}:</strong>
             {% endif %}
-            <a href="{{ fw[1].factory }}">factory</a>
+            <a href="{{ fw[1].factory }}">Firmware</a>
             {% endif %}
             <br/>
             {% endfor %}
@@ -107,7 +107,8 @@ layout: base
             {% if fw[0] %}
             <strong>{{ fw[0] }}:</strong>
             {% endif %}
-            <a href="{{ fw[1].sysupgrade }}">sysupgrade</a>
+            <a href="{{ fw[1].sysupgrade }}">Upgrade{% 
+            if fw[1].factory : %}{% else %}=Firmware{% endif %}</a>
             {% endif %}
             <br/>
             {% endfor %}
@@ -134,5 +135,9 @@ layout: base
     <p>Sämtliche Firmware-Dateien findest du unter <a href="{{ site.firmware.base }}">{{ site.firmware.base }}</a>.</p>
     <p>Firmware-mirror <a href="{{ site.firmware_mirror }}">{{ site.firmware_mirror }}</a>.</p>
     <p>Das Gluon-Site-Repository befindet sich unter <a href="{{ site.firmware.gluon_site }}">{{ site.firmware.gluon_site }}</a>.</p>
+  </div>
+  <div class="four columns panel">
+    <h5>Nutzungsbedingungen</h5>
+    <p>Für die Verwendung der Freifunk Firmware in Verbindung mit dem angebotenem Übergang ins Internet gelten unsere <a href="/nutzungsbedingungen.html">Nutzungsbedingungen</a>.</p>
   </div>
 </div>
