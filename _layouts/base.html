@@ -104,7 +104,7 @@
             {% for sip in site.community.sip %}
             {{ sip }}{% if forloop.rindex > 2 %}, {% else %}{%if forloop.rindex == 2%} oder {% endif %}{% endif %}{% endfor %} <br/>
           {% endif %}
-          <strong>IRC:</strong> {{ site.community.irc }} im <a href="http://hackint.org">hackint</a> | <a href="http://freifunk.discovibration.de/ircredirect.php">Live Webchat</a><br/>
+          <strong>IRC:</strong> #{{ site.community.irc }} im <a href="http://hackint.org">hackint</a> | <a href="http://freifunk.discovibration.de/ircredirect.php" target="_blank">Live Webchat</a> | <a href="https://vector.eclabs.de/#/room/#hackint_#ffki:matrix.eclabs.de" target="_blank">Matrix Webchat</a><br/>
           {% if site.community contains 'twitter' %}
           <strong>Twitter:</strong> <a href="https://twitter.com/{{ site.community.twitter }}">@{{ site.community.twitter }}</a><br/>
           {% endif %}
@@ -117,7 +117,6 @@
           <li><a href="{{ site.community.url_wiki }}">Wiki</a></li>
           <li><a href="{{ site.community.url_nodelist }}">Knotenliste</a></li>
           <li><a href="{{ site.community.url_graph }}">Netzgraph</a></li>
-          <li><a href="{{ site.community.url_geomap }}">Knotenkarte</a></li>
           <li><a href="{{ site.community.url_meshviewer }}">Meshviewer</a></li>
           <li><a href="/nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
           <li><a href="/spenden.html">Spenden</a></li>
