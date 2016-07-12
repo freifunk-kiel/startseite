@@ -1,7 +1,11 @@
 ---
 layout: base
 ---
-
+<style type="text/css">
+    figure{
+        padding-bottom: 2em;
+    }
+</style>
 <div class="heading">
   <div class="row">
     <div class="twelve columns">
@@ -41,7 +45,7 @@ layout: base
 
     <figure>
       <img src="images/knoten-einrichten/image3458.png" />
-      <figcaption>Zur Einrichtung: Gelbe Buchse benutzen. <strong>Ausnahme beim TL-WR841ND:</strong> Blaue Buchse!</figcaption>
+      <figcaption>Zur Einrichtung: Gelbe Buchse benutzen. <strong>Ausnahme beim TL-WR841N/ND v7 oder älter:</strong> Blaue Buchse!</figcaption>
     </figure>
 
     <h3>Schritt 2: Konfiguration starten</h3>
@@ -75,7 +79,7 @@ layout: base
     <h3>Schritt 4: Mesh-VPN</h3>
 
     <p>Setze nun einen Haken hinter <em>"Mesh-VPN aktivieren"</em>, um eine verschlüsselte Verbindung über deinen Internet-Router zum Freifunk-Server
-    herzustellen. Wir empfehlen, dies zu tun. Der Freifunk-Server verbindet deinen Freifunkknoten mit dem Internet
+    herzustellen. <b>Wir empfehlen, dies zu tun</b>. Der Freifunk-Server verbindet deinen Freifunkknoten mit dem Internet
     und dem Teil des Freifunk-Netzes, der nicht über WLAN erreicht wird. Wenn diese Option nicht aktiviert wird,
     kann der Knoten nur mit den Knoten kommunizieren, die er direkt oder indirekt per WLAN oder über andere
     Knoten mit aktivierter Option erreicht. Der Zugang zum Internet ist dann nur möglich, wenn mindestens bei einem
@@ -91,13 +95,13 @@ layout: base
     wird im alltäglichen Betrieb nicht allzu viel von deiner Bandbreite in Anspruch nehmen. Unsere Empfehlung ist
     deshalb, die Begrenzung nicht zu aktivieren. Solltest du aber trotzdem eine Begrenzung eintragen wollen, setze
     den Haken "Mesh-VPN Bandbreite begrenzen" und trage in die beiden Felder darunter die gewünschten Limits
-    ein. Die Minimalwerte sind 1000 im oberen und 100 im unteren Feld.</p>
+    ein. Die Minimalwerte sind 1000 (kbit/s) im oberen (Download) und 100 im unteren Feld (Upload) den Upload sollte man aber nicht unter 800 kbit/s stellen.</p>
 
     <h3>Schritt 5: Standort</h3>
 
     <p>Wenn du möchtest, dass du und andere Mitmenschen den Standort deines Knotens in der <a href="{{ site.community.url_geomap }}">Freifunk-Karte</a> sehen können,
     dann musst du hier ein Häkchen setzen und die rot unterlegten Felder ausfüllen. Die Werte dazu kannst zum Beispiel
-    mit Hilfe des Knopfes <em>"Koordinaten beim nächsten Klick anzeigen"</em> in der angesprochenen <a href="{{ site.community.url_geomap }}">Karte</a> ermitteln.
+    mit Hilfe des Stecknadel-Knopfes in der angesprochenen <a href="{{ site.community.url_geomap }}">Karte</a> ermitteln. Außerdem gibt es inzwischen noch ein Feld für die <b>Höhe </b> in Metern über dem Boden. Schätze diesen Wert einfach indem du 3 Meter pro Stockwerk rechnest.
     </p>
 
     <figure>
@@ -107,11 +111,9 @@ layout: base
     <h3>Schritt 6: Kontakt</h3>
 
     <p>Um einen Knoten-Betreiber erreichen zu können, braucht die Gemeinschaft eine Kontakt-Möglichkeit.
-       Du kannst dazu in diesem Feld beispielsweise eine E-Mail Adresse eintragen oder einen Namen, der dir von
-       anderen aktiven Freifunker zugeordneten werden kann. Beachte, dass die Kontaktdaten,
-       die du hier eingibts, öffentlich zugänglich sind.
-       Wenn Du magst, kannst du hier mehrere Werte eintragen.Trenne diese bitte mit einem Komma.
-       Wenn du unsicher bist, dann lass dieses Feld leer.
+       Du kannst dazu in diesem Feld beispielsweise eine E-Mail oder deinen Chat-Namen angeben. Beachte, dass die Kontaktdaten, die du hier eingibts, öffentlich zugänglich sind.
+       Wenn Du magst, kannst du hier mehrere Werte eintragen. Trenne diese bitte mit einem Komma.
+       Wenn du unsicher bist, dann gib einfach einen Namen an, der dir von anderen aktiven Freifunkern zugeordneten werden kann.
        Du kannst das später noch ändern.
     </p>
 
