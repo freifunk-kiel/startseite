@@ -11,7 +11,7 @@ community:
   # Custom URLs
   url_wiki:  "http://wiki.freifunk.in-kiel.de/"
 
-  url_geomap: "http://map.freifunk.in-kiel.de/"
+  url_geomap: "http://mesh.freifunk.in-kiel.de/"
   url_graph: "http://graph.freifunk.in-kiel.de/"
   url_nodelist: "http://alfred.freifunk.in-kiel.de/"
   url_meshviewer: "http://mesh.freifunk.in-kiel.de/"
