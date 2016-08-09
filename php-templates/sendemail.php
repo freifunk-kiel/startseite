@@ -6,17 +6,29 @@
 
 $absender_seite="http://freifunk.in-kiel.de";
 $empfaenger = "mailingliste@example.freifunk.net";
-$absendername = preg_replace("/[^a-zA-Z \-.,_]/","",trim($_REQUEST["name"]));
-$absendermail = "formular@example.freifunk.net";
 
-if(empty($_REQUEST["name"])){
-	header("Location: $absender_seite/fehler.html?message=".urlencode("Fehler beim Versenden deiner Email! Der Name enthält ungültige Zeichen!"));
+$absendername = preg_replace("/[^a-zA-Z \-.,_äöüÄÖÜß\(\)]/","",trim($_REQUEST["name"]));
+$absendername = preg_replace("/,/","\,",$absendername);
+$absendername = preg_replace("/ä/","ae",$absendername);
+$absendername = preg_replace("/ö/","oe",$absendername);
+$absendername = preg_replace("/ü/","ue",$absendername);
+$absendername = preg_replace("/Ä/","ae",$absendername);
+$absendername = preg_replace("/Ö/","oe",$absendername);
+$absendername = preg_replace("/Ü/","ue",$absendername);
+$absendername = preg_replace("/ß/","ss",$absendername);
+if(empty($absendername)){
+  header("Location: $absender_seite/fehler.html?message=".rawurlencode("Fehler beim Versenden deiner Email! Der Name ist leer oder enthält ungültige Zeichen!"));
+  exit;
 }
-if(!empty($_REQUEST["from"])) $absenderemail = $_REQUEST["from"];
-$betreff = "Kontaktformular Freifunk";
-$text = $_REQUEST["body"];
-if(mail($empfaenger, $betreff, $text, "From: $absendername <$absendermail>")){
-        header("Location: $absender_seite/bestaetigung.html?message=".urlencode("Deine Email wurde erfolgreich versandt."));
-} else {
-        header("Location: $absender_seite/fehler.html?message=".urlencode("Fehler beim Versenden deiner Email!"));
+$absendermail = preg_replace("/[^a-zA-Z \-._@]/","",trim($_REQUEST["from"]));
+if(empty($absendermail)) {
+  header("Location: $absender_seite/fehler.html?message=".rawurlencode("Fehler beim Versenden deiner Email! Deine Email ist leer oder enthält ungültige Zeichen!"));
+  exit;
 }
+$betreff = "[Kontaktformular Freifunk] $absendername - $absendermail"; 
+$text = utf8_decode(trim(strip_tags($_REQUEST["body"]))); 
+if(mail($empfaenger, $betreff, $text, "From: \"".utf8_encode($absendername)."\" <$absendermail>")){ 
+        header("Location: $absender_seite/bestaetigung.html?message=".rawurlencode("Deine Email wurde erfolgreich versandt.")); 
+} else { 
+        header("Location: $absender_seite/fehler.html?message=".rawurlencode("Fehler beim Versenden deiner Email!")); 
+} 
