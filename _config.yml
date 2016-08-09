@@ -20,6 +20,8 @@ community:
 
   url_firmware: "http://freifunk.in-kiel.de/firmware.html"
 
+  url_mailsender: "http://freifunk.discovibration.de/freifunk-mail.php"
+
   # Mail Contacts
   mail_info: "freifunk@lists.in-kiel.de"
   mail_keys: "freifunk-keys@lists.in-kiel.de"

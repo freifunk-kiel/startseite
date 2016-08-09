@@ -1,0 +1,48 @@
+---
+layout: base
+---
+
+<style>
+form {
+  display: block;
+  width: 100%;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #55595c;
+  background-color: #f8f8f8;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
+button, input, select, textarea {
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 5px;
+}
+textarea {
+  height:10em;
+}
+
+</style>
+<div class="heading">
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Nachricht senden</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="six columns">
+    <div class="entry-content">
+      <h3>Nachricht an die Mailingliste</h3>
+      <form method="post" action="{{ site.community.url_mailsender }}">
+        <div><label>Dein Name:</label> <input title="text" name="name"></div>
+        <div><label>Deine Email-Adresse:</label> <input title="email" name="from"></div>
+        <div>Nachricht:<br>
+          <textarea name="body"></textarea>
+        </div>
+        <input type="submit">
+      </form>
+    </div>
+  </div>
+</div>
