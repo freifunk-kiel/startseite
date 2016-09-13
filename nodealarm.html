@@ -1,0 +1,66 @@
+---
+layout: base
+---
+
+<style>
+form {
+  display: block;
+  width: 100%;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #55595c;
+  background-color: #f8f8f8;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
+button, input, select, textarea {
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 5px;
+}
+textarea {
+  height:10em;
+}
+
+</style>
+<div class="heading">
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Knotenalarm</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="eight columns">
+    <div class="entry-content"
+      onclick="$('#nodealarminfobox').show()"
+      ><h3>Möchtest du automatisiert Status-E-Mails bekommen?</h3>
+      <form method="post" action="{{ site.community.url_nodealarm }}">
+        <p>
+          Du kannst Dich automatisiert benachrichtigen lassen, sobald dein Knoten längere Zeit offline ist. <!--Die erste E-Mail bekommst du nach 3 Stunden, nach einem Tag gibt es dann nochmal eine Erinnerung. Sollte dein Knoten nach einer Woche immernoch offline sein, bekommst du eine letzte Status-E-Mail.-->
+        </p>
+        <p>Du kannst den automatisierten Versand von Status-E-Mails selbstverständlich jederzeit wieder deaktivieren.</p>
+        <p><input type="checkbox" name="confirm" checked> Informiert mich, wenn mein Knoten offline ist</p>
+        <div><label>Dein Name:</label> <input title="text" name="name"></div>
+        <div><label>Deine Email-Adresse:</label> <input title="email" name="from"></div>
+        <div>Name, MAC-Adresse oder ID deiner Knoten:<br>
+          <textarea name="body"></textarea>
+        </div>
+        <p>
+          (Deinen Namen und deine E-Mail-Adresse werden selbstverständlich nicht öffentlich einsehbar sein und werden von uns nicht weitergegeben oder anderweitig verwendet. Versprochen!)
+        </p>
+        <div id="nodealarminfobox" class="nodealarm-info alert alert-info">
+           <p>
+            <span class="alertsign"></span> 
+            Zur Bestätigung deiner E-Mail-Adresse schicken wir dir nach dem Senden deiner Daten eine E-Mail mit einem Bestätigungs-Link. Erst nach der Bestätigung deiner E-Mail-Adresse wirst du informiert, falls dein Knoten längere Zeit offline ist.
+          </p>
+          <p>
+            Die Inbetriebnahme deines Knotens kannst du selbstverständlich unabhängig von der Bestätigung immer sofort duchführen.<br>
+          </p>
+        </div>
+        <input type="submit" class="button">
+      </form>
+    </div>
+  </div>
+</div>

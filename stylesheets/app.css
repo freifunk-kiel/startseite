@@ -47,7 +47,6 @@ h1 > .postdate {
   text-indent: -1em; 
 }
 
-
 /* -----------------------------------------
    bootstrap alerts
 ----------------------------------------- */
@@ -73,6 +72,12 @@ h1 > .postdate {
     border-color: #ebccd1;
 }
 
+.alert-info {
+    color:#31708f;
+    background-color:#d9edf7;
+    border-color:#bce8f1
+}
+
 /* -----------------------------------------
    Firmware
 ----------------------------------------- */
@@ -96,9 +101,32 @@ h1 > .postdate {
   min-width:90%;
 }
 
+.nodealarm-link{
+  position:absolute;
+  top:3px;
+  right:10px;
+  font-size: 1.1em;
+}
+.nodealarm-info{
+  display:none;
+}
+
+.alertsign::after{
+  content:"\26a0";
+  font-size: 2em;
+  padding-right:2px;
+}
+
 /* -----------------------------------------
    responsive design
 ----------------------------------------- */
+
+@media only screen and (max-width: 1024px) {
+  .nodealarm-link{
+    font-size: .8em;
+    right:2px;
+  }
+}
 
 @media only screen and (max-width: 570px) {
   div.header {
