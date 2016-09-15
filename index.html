@@ -32,7 +32,27 @@ layout: base
 
 <div class="row">
 
-  <div class="eight columns">
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+  <script type="text/javascript">
+    <!-- //
+    var speechpause=0;
+    function toggleSpeech(){
+      if(speechpause!=1){
+        responsiveVoice.pause();
+        speechpause=1;
+      }else{
+        responsiveVoice.resume();
+        speechpause=0;
+      }
+    }
+    //-->
+  </script>
+  <div class="eight columns" id="startpagecontent">
+    <div style="float:right">
+      <input onclick="responsiveVoice.speak($('#startpagecontent').text(), 'Deutsch Female', {pitch: .7});" type="button" value="🔊 Play" />
+      <input onclick="toggleSpeech()" type="button" value="||" />
+    </div>
+    
     <h2 id="was_ist_freifunk">Was ist Freifunk?</h2>
     <p>
     Freifunk ist ein Projekt, über das Menschen wie du und ich ein stadtweites drahtloses Datennetz aufbauen.
