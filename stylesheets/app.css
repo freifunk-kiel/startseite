@@ -47,6 +47,29 @@ h1 > .postdate {
   text-indent: -1em; 
 }
 
+label.inputleft{
+  float:left;
+  min-width: 160px;
+  font-weight: bold;
+}
+input.inputright{
+  width: 370px;
+  border-radius: 4px;
+}
+textarea, input[type='text'], input[type='email'], input[type='password'], select {
+  transition: all 0.30s ease-in-out;
+  border:1px solid
+  padding: 4px;
+}
+textarea:focus, input[type='text']:focus, input[type='email']:focus, input[type='password']:focus, select:focus {
+  background-color: #fff;
+  border:1px solid
+  padding: 4px;
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0 none;
+}
+
 /* -----------------------------------------
    bootstrap alerts
 ----------------------------------------- */

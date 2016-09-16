@@ -38,17 +38,17 @@ textarea {
       ><h3>Möchtest du automatisiert Status-E-Mails bekommen?</h3>
       <form method="post" action="{{ site.community.url_nodealarm }}">
         <p>
-          Du kannst Dich automatisiert benachrichtigen lassen, sobald dein Knoten längere Zeit offline ist. <!--Die erste E-Mail bekommst du nach 3 Stunden, nach einem Tag gibt es dann nochmal eine Erinnerung. Sollte dein Knoten nach einer Woche immernoch offline sein, bekommst du eine letzte Status-E-Mail.-->
+          Hier kannst du dich automatisiert benachrichtigen lassen, sobald dein Knoten längere Zeit offline sein sollte. <!--Die erste E-Mail bekommst du nach 3 Stunden, nach einem Tag gibt es dann nochmal eine Erinnerung. Sollte dein Knoten nach einer Woche immernoch offline sein, bekommst du eine letzte Status-E-Mail.
+          Den automatisierten Versand von Status-E-Mails kannst du jederzeit wieder deaktivieren.-->
         </p>
-        <p>Du kannst den automatisierten Versand von Status-E-Mails selbstverständlich jederzeit wieder deaktivieren.</p>
-        <p><input type="checkbox" name="confirm" checked> Informiert mich, wenn mein Knoten offline ist</p>
-        <div><label>Dein Name:</label> <input title="text" name="name"></div>
-        <div><label>Deine Email-Adresse:</label> <input title="email" name="from"></div>
-        <div>Name, MAC-Adresse oder ID deiner Knoten:<br>
-          <textarea name="body"></textarea>
-        </div>
+        <p><input type="checkbox" name="confirm" checked> <strong>Ja, bitte informiert mich wenn mein Knoten offline ist!</strong></p>
+        <p><label class="inputleft">Dein Name:</label> <input type="text" class="inputright" name="name"></p>
+        <p><label class="inputleft">Deine Email-Adresse:</label> <input type="email" class="inputright" name="from"></p>
         <p>
-          (Deinen Namen und deine E-Mail-Adresse werden selbstverständlich nicht öffentlich einsehbar sein und werden von uns nicht weitergegeben oder anderweitig verwendet. Versprochen!)
+          Trage hier den Hostnamen oder MAC-Adresse deiner Knoten ein oder die Kontakt&shy;information, die du in der Knotenkonfiguration hinterlegt hast (einen Eintrag pro Zeile)<br>
+          <strong>Deine Knoten:</strong>
+          <textarea name="body"></textarea>
+          (Dein Name und deine E-Mail-Adresse werden selbstverständlich nicht öffentlich einsehbar sein und werden von uns weder weitergegeben noch anderweitig verwendet. Versprochen!)
         </p>
         <div id="nodealarminfobox" class="nodealarm-info alert alert-info">
            <p>
