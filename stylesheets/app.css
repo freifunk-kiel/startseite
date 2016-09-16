@@ -166,9 +166,12 @@ textarea:focus, input[type='text']:focus, input[type='email']:focus, input[type=
   .numnodes{
     margin-left:-20px;
   }
+  input.inputright{
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 730px) {
   .numnodes{
     display: none;
   }
