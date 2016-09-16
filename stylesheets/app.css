@@ -140,6 +140,14 @@ textarea:focus, input[type='text']:focus, input[type='email']:focus, input[type=
   padding-right:2px;
 }
 
+.numnodes{
+  position:absolute;
+  margin-left:-120px;
+  margin-top:24px;
+  width: 118px;
+  height: 92px;
+}
+
 /* -----------------------------------------
    responsive design
 ----------------------------------------- */
@@ -150,6 +158,21 @@ textarea:focus, input[type='text']:focus, input[type='email']:focus, input[type=
     right:2px;
   }
 }
+
+@media only screen and (max-width: 870px) {
+  div.header {
+    background: transparent !important;
+  }
+  .numnodes{
+    margin-left:-20px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .numnodes{
+    display: none;
+  }
+} 
 
 @media only screen and (max-width: 570px) {
   div.header {
