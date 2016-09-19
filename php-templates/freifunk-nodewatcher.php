@@ -5,11 +5,11 @@
  */
 
 $absender_seite="http://freifunk.in-kiel.de";
-$nodewatcher_mail = "knotenalarm@lists.freifunk.in-kiel.de";
+$nodewatcher_mail = "freifunk-knotenalarm@lists.in-kiel.de";
 $nodewatcher_url='http://freifunk.discovibration.de/freifunk-nodewatcher.php';
+$fromheader="From: \"Freifunk Knotenalarm\" <$nodewatcher_mail>";
 $community_TLD="FFKI";
 $nodewatcher_name="KNOTENALARM";
-
 
 if (!empty($_REQUEST["confirm-email"]) and trim($_REQUEST["confirm-email"])!=""){
 	$confirmmail=$absendermail=preg_replace("/[^a-zA-Z0-9 \-._@]/","",trim($_REQUEST["confirm-email"]));
@@ -19,15 +19,15 @@ if (!empty($_REQUEST["deactivate"]) and trim($_REQUEST["deactivate"])!=""){
 }
 if(!empty($confirmmail)){
 	$mess="Du wurdest erfolgreich eingetragen.";
-	mail($confirmmail, '['.$community_TLD.'] erfolgreich eingetragen',$mess, "From: ".$nodewatcher_mail);
-	mail($nodewatcher_mail, '['.$community_TLD.' '.$nodewatcher_name.'] confirmation',$confirmmail, "From: ".$nodewatcher_mail);
+	mail($confirmmail, '['.$community_TLD.'] erfolgreich eingetragen',$mess,$fromheader);
+	mail($nodewatcher_mail, '['.$community_TLD.' '.$nodewatcher_name.'] confirmation',$confirmmail,$fromheader);
 	header("Location: $absender_seite/bestaetigung.html?message=".rawurlencode($mess));
 	exit;
 }
 if(!empty($deactivatemail)){
 	$mess="Du wurdest erfolgreich abgemeldet.";
-	mail($deactivatemail, '['.$community_TLD.'] erfolgreich abgemeldet',$mess, "From: ".$nodewatcher_mail);
-	mail($nodewatcher_mail, '['.$community_TLD.' '.$nodewatcher_name.'] abgemeldet',$deactivatemail, "From: ".$nodewatcher_mail);
+	mail($deactivatemail, '['.$community_TLD.'] erfolgreich abgemeldet',$mess,$fromheader);
+	mail($nodewatcher_mail, '['.$community_TLD.' '.$nodewatcher_name.'] abgemeldet',$deactivatemail,$fromheader);
 	header("Location: $absender_seite/bestaetigung.html?message=".rawurlencode($mess));
 	exit;
 }
@@ -74,8 +74,9 @@ dein Freifunk Kiel
 Möchtest du keine Status-E-Mails zu diesem Knoten mehr erhalten, so kannst du den Versand jederzeit deaktivieren:
 '.$nodewatcher_url.'?deactivate='.$absendermail.'
 ';
-	mail($absendermail, '['.$community_TLD.'] '.ucfirst($nodewatcher_name).' bestätigen', utf8_decode($confirmtext), "From: ".$nodewatcher_mail);
+	mail($absendermail, '[FFKI] Knotenalarm bestätigen', utf8_decode($confirmtext),$fromheader);
 	header("Location: $absender_seite/bestaetigung.html?message=".rawurlencode("Du wurdest eingetragen. Bitte schaue in deinem Postfach nach der Bestätigungs-Email. Erst, wenn du diese beantwortet hast, wirst du benachrichtigt."));
 } else {
 	header("Location: $absender_seite/fehler.html?message=".rawurlencode("Fehler beim Versenden deiner Email!"));
 }
+
