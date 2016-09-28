@@ -124,6 +124,11 @@ textarea:focus, input[type='text']:focus, input[type='email']:focus, input[type=
   min-width:90%;
 }
 
+#firmware-info-box a{
+  font-size: 12px;
+  word-wrap: break-word;
+}
+
 .nodealarm-link{
   position:absolute;
   top:3px;
