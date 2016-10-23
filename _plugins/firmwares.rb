@@ -5,14 +5,14 @@ require 'pp'
 
 COMMUNITY_TLD = 'ffki'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-FIRMWARE_VERSION = '2016.1.5.1'
+FIRMWARE_VERSION = '2016.1.6'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
 #FIRMWARE_MIRROR = 'http://gluon.ffki.de/firmware/stable/'
 #FIRMWARE_BASE = 'http://localhost/freifunk/firmware/ffki/0.7.1/'
-FIRMWARE_BASE = 'http://freifunk.in-kiel.de/ffki-firmware/latest/'
-FIRMWARE_MIRROR = 'https://vm02.eclabs.de/firmware/stable/2016.1.5.1/'
+FIRMWARE_BASE = 'https://vm02.eclabs.de/firmware/stable/2016.1.6/'
+FIRMWARE_MIRROR = 'http://freifunk.in-kiel.de/ffki-firmware/latest/'
 
 GROUPS = {
   "8Devices" => {
