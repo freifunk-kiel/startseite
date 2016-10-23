@@ -44,7 +44,7 @@ if(empty($absendername)){
   header("Location: $absender_seite/fehler.html?message=".rawurlencode("Fehler beim Versenden deiner Email! der Name ist leer oder enthält ungültige Zeichen!"));
   exit;
 }
-$absendermail = preg_replace("/[^a-zA-Z0-9 \-._@]/","",trim($_REQUEST["from"]));
+$absendermail = preg_replace("/[^a-zA-Z0-9 \-._@!\\#$%&`*+\/=?^{|}~]/","",trim($_REQUEST["from"]));
 if(empty($absendermail)) {
   header("Location: $absender_seite/fehler.html?message=".rawurlencode("Fehler beim Versenden deiner Email! Deine Email ist leer oder enthält ungültige Zeichen!"));
   exit;
@@ -79,4 +79,3 @@ Möchtest du keine Status-E-Mails zu diesem Knoten mehr erhalten, so kannst du d
 } else {
 	header("Location: $absender_seite/fehler.html?message=".rawurlencode("Fehler beim Versenden deiner Email!"));
 }
-
