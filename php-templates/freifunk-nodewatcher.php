@@ -12,10 +12,10 @@ $community_TLD="FFKI";
 $nodewatcher_name="KNOTENALARM";
 
 if (!empty($_REQUEST["confirm-email"]) and trim($_REQUEST["confirm-email"])!=""){
-	$confirmmail=$absendermail=preg_replace("/[^a-zA-Z0-9 \-._@]/","",trim($_REQUEST["confirm-email"]));
+	$confirmmail=$absendermail=preg_replace("/[^a-zA-Z0-9 \-._@!\\#$%&`*+\/=?^{|}~]/","",trim($_REQUEST["confirm-email"]));
 }
 if (!empty($_REQUEST["deactivate"]) and trim($_REQUEST["deactivate"])!=""){
-	$deactivatemail=$absendermail=preg_replace("/[^a-zA-Z0-9 \-._@]/","",trim($_REQUEST["deactivate"]));
+	$deactivatemail=$absendermail=preg_replace("/[^a-zA-Z0-9 \-._@!\\#$%&`*+\/=?^{|}~]/","",trim($_REQUEST["deactivate"]));
 }
 if(!empty($confirmmail)){
 	$mess="Du wurdest erfolgreich eingetragen.";
