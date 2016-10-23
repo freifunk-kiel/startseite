@@ -58,7 +58,7 @@ if(mail($nodewatcher_mail, $betreff, $text, "From: \"".utf8_encode($absendername
 
 für einen deiner Knoten wurde der automatisierte Versand von Status-E-Mails aktiviert. Um sicherzustellen, dass du wirklich der richtige Empfänger für diese E-Mails bist, bitten wir dich, deine E-Mail-Adresse durch einen Klick auf folgenden Bestätiguns-Link unten zu bestätigen:
 
-'.$nodewatcher_url.'?confirm-email='.$absendermail.'
+'.$nodewatcher_url.'?confirm-email='.urlencode($absendermail).'
 
 Erst danach wird der Versand von Status-E-Mails wirklich stattfinden.
 
