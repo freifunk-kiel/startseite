@@ -9,16 +9,14 @@ community:
   country: "DE"
 
   # Custom URLs
-  url_wiki:  "http://wiki.freifunk.in-kiel.de/"
+  url_wiki:  "https://wiki.freifunk.in-kiel.de/"
   url_webchat: "https://riot.eclabs.de/#/room/#hackint_#ffki:matrix.eclabs.de"
-  url_geomap: "http://mesh.freifunk.in-kiel.de/"
-  url_graph: "http://graph.freifunk.in-kiel.de/"
-  url_nodelist: "http://alfred.freifunk.in-kiel.de/"
+  url_graph: "https://grafahana.freifunk.in-kiel.de/"
   url_meshviewer: "http://mesh.freifunk.in-kiel.de/"
 
-  url_mailman: "http://lists.in-kiel.de/cgi-bin/mailman/listinfo/freifunk"
+  url_mailman: "https://lists.in-kiel.de/cgi-bin/mailman/listinfo/freifunk"
 
-  url_firmware: "http://freifunk.in-kiel.de/firmware.html"
+  url_firmware: "https://freifunk.in-kiel.de/firmware.html"
 
   url_mailsender: "http://freifunk.discovibration.de/freifunk-mail.php"
   url_nodealarm: "http://freifunk.discovibration.de/freifunk-nodewatcher.php"
@@ -50,10 +48,15 @@ firmware:
 tld:
   label: "ffki"
   ns:
-    - "10.116.128.1"
-    - "fda1:384a:74de:4242::1"
     - "10.116.136.1"
-    - "fda1:384a:74de:4242::5"
+    - "fda1:384a:74de:4242::ff01"
+    - "10.116.168.1"
+    - "fda1:384a:74de:4242::ff02"
     - "10.116.144.1"
-    - "fda1:384a:74de:4242::8"
-    - "10.116.152.1"
+    - "fda1:384a:74de:4242::ff03"
+    - "10.116.176.1"
+    - "fda1:384a:74de:4242::ff05"
+    - "10.116.184.1"
+    - "fda1:384a:74de:4242::ff06"
+    - "10.116.192.1"
+    - "fda1:384a:74de:4242::ff07"
