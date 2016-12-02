@@ -12,7 +12,7 @@ community:
   url_wiki:  "https://wiki.freifunk.in-kiel.de/"
   url_webchat: "https://riot.eclabs.de/#/room/#hackint_#ffki:matrix.eclabs.de"
   #url_geomap:
-  url_graph: "https://grafahana.freifunk.in-kiel.de/"
+  url_graph: "https://grafana.freifunk.in-kiel.de/"
   #url_nodelist:
   url_meshviewer: "http://mesh.freifunk.in-kiel.de/"
 
