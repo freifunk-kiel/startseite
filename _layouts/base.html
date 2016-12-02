@@ -105,8 +105,12 @@
         <h5>Links</h5>
         <ul>
           <li><a href="{{ site.community.url_wiki }}">Wiki</a></li>
+          {% if site.community contains 'url_nodelist' %}
           <li><a href="{{ site.community.url_nodelist }}">Knotenliste</a></li>
+          {% endif %}
+          {% if site.community contains 'url_graph' %}
           <li><a href="{{ site.community.url_graph }}">Netzgraph</a></li>
+          {% endif %}
           <li><a href="{{ site.community.url_meshviewer }}">Meshviewer</a></li>
           <li><a href="/nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
           <li><a href="/spenden.html">Spenden</a></li>
