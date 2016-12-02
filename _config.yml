@@ -38,11 +38,7 @@ community:
   geo_lon: 10.1
 
 firmware:
-  #base: "https://freifunk.in-kiel.de/firmware/stable/"
-  #base: "http://localhost/freifunk/firmware/ffki/0.7.1/"
-  #base: "http://gluon.ffki.de/firmware/stable/"
-  #base: "http://freifunk.discovibration.de/firmware/firmware-0.7.1/"
-  base: "http://freifunk.in-kiel.de/ffki-firmware/latest/"
+  base: "http://freifunk.in-kiel.de/firmware/stable/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
