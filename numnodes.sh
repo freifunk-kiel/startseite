@@ -1,9 +1,8 @@
 #!/bin/bash
 # reads all online nodes and creates an HTML page from the template numnodes.template
-JSON=$(wget http://127.0.0.1:4000/ffapi.json -qO -)2> /dev/null
 
 #echo -n "online nodes: "
-num="$(echo $JSON | jq '.state.nodes')" 2> /dev/null
+num=$(wget http://127.0.0.1:4000/metrics -qO - | grep meshnodes_online_total|cut -d ' ' -f2) 2> /dev/null
 
 if test "$num" -ge 1; then
 
