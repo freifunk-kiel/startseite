@@ -162,7 +162,7 @@ GROUPS = {
 
       if rev == '-xw'
         'XW'
-      elsif model == 'Nanostation M' or model == 'Nanostation-Loco M' or model == 'Bullet M'
+      elsif model == 'Nanostation M' or model == 'Loco M' or model == 'Nanostation-Loco M' or model == 'Bullet M'
         'XM'
       else
         nil
