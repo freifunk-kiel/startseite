@@ -24,6 +24,11 @@ GROUPS = {
       "AP121",
       "AP121U",
       "Hornet-UB",
+      "Network-N2-N5",
+      "Network-Tube2H",
+      "Network-AP121",
+      "Network-AP121U",
+      "Network-Hornet-UB"
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -96,8 +101,17 @@ GROUPS = {
       "OM2P-LC",
       "OM5P",
       "OM5P-AN",
+      "mr1750",
+      "mr1750v2"
     ],
     extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
+  },
+  "Raspberry Pi" => {
+    models: [
+      "Raspberry-Pi",
+      "Raspberry-Pi-2"
+    ],
+    extract_rev: lambda { |model, suffix| nil },
   },
   "TP-Link" => {
     models: [
