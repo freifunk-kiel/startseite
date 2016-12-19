@@ -59,6 +59,7 @@ GROUPS = {
     models: [
       "6408A",
       "6416A",
+      "AR150"
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
