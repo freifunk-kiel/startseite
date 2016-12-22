@@ -205,6 +205,14 @@ GROUPS = {
       "N750",
     ],
     extract_rev: lambda { |model, suffix| nil },
+
+      if rev == ''
+        'XW'
+      elsif model == 'Nanostation M' or model == 'Loco M' or model == 'Nanostation-Loco M' or model == 'Bullet M'
+        'XM'
+      else
+        nil
+      end
   },
   "x86" => {
     models: [
