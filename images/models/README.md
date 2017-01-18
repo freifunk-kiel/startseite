@@ -8,7 +8,8 @@ downloaded and resized with
 git clone https://github.com/Moorviper/Freifunk-Router-Anleitungen
 cd Freifunk-Router-Anleitungen/
 mkdir fronts
-for i in *-*; do touch fronts/$i.jpg; cp $i/*front*.jpg fronts/$i.jpg; done
+for i in *-*; do cd $i; for f in *front*.jpg; do echo "$f";done; cd ../fronts/; ln -s ../$i/$f $i.jpg;cd ..;done
+#for i in *-*; do touch fronts/$i.jpg; cp $i/*front*.jpg fronts/$i.jpg; done
 cd fronts/
 for i in *.jpg; do
 new="$(basename $i .jpg \
