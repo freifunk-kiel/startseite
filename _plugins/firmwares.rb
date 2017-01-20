@@ -30,6 +30,7 @@ GROUPS = {
       "Network-AP121U",
       "Network-Hornet-UB"
     ],
+    #FIXME: alfa-networks to alfa in OpenWRT Wiki info links and Router node pictures
     extract_rev: lambda { |model, suffix| nil },
   },
   "Allnet" => {
@@ -157,6 +158,7 @@ GROUPS = {
       "TL-WR940N/ND",
       "TL-WR941N/ND",
     ],
+    #FIXME: replace / (as in TL-WA701N/ND) with -, thereby fixing the Images and Info OpenWRT Wiki Links
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "Ubiquiti" => {
@@ -194,8 +196,18 @@ GROUPS = {
       #els
       if model == 'UniFi' then
         'UniFi AP (LR)'
+      elseif model == 'N600' then
+        'My Net N600'
+      elseif model == 'N750' then
+        'My Net N750'
       else
         model
+      end
+    transform_group: lambda { |group|
+      if group == 'wd-my-net' then
+        'WD (Western Digital)'
+      else
+        group
       end
     }
   },
@@ -205,14 +217,6 @@ GROUPS = {
       "N750",
     ],
     extract_rev: lambda { |model, suffix| nil },
-
-      if rev == ''
-        'XW'
-      elsif model == 'Nanostation M' or model == 'Loco M' or model == 'Nanostation-Loco M' or model == 'Bullet M'
-        'XM'
-      else
-        nil
-      end
   },
   "x86" => {
     models: [
