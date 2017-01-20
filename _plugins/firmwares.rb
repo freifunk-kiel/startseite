@@ -63,7 +63,7 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
-  "GL" => {
+  "GL" => { #this one is also GL.inet
     models: [
       "AR150"
     ],
