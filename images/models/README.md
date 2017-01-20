@@ -30,3 +30,18 @@ mv *jpg large/
 
 mv fronts/* /var/www/freifunk/ffki-startseite/images/models/
 ```
+
+Point the Webserver to this directory.
+For Apache add these lines:
+```
+	#Router Node Pictures
+	Alias /images/models/ /opt/hardware/Freifunk-Router-Anleitungen/router/fronts/
+	<Directory /opt/hardware/Freifunk-Router-Anleitungen/router/fronts/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Require all granted
+		ExpiresByType image/png "access plus 1 week"
+		ExpiresByType image/jpeg "access plus 1 week"
+	</Directory>
+```
+to the ffki-startseite config.
