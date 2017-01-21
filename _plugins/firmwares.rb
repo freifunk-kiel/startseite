@@ -159,6 +159,7 @@ GROUPS = {
       "TL-WR941N/ND",
     ],
     #FIXME: replace / (as in TL-WA701N/ND) with -, thereby fixing the Images and Info OpenWRT Wiki Links
+    #FIXME: replace tl-wr1043n-nd with tl-wr1043nd , thereby fixing the OpenWRT Wiki Links, Images works already!
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "Ubiquiti" => {
