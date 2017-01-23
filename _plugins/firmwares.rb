@@ -196,13 +196,14 @@ GROUPS = {
       #els
       if model == 'UniFi' then
         'UniFi AP (LR)'
-      elseif model == 'N600' then
+      elsif model == 'N600' then
         'My Net N600'
-      elseif model == 'N750' then
+      elsif model == 'N750' then
         'My Net N750'
       else
         model
       end
+    },
     transform_group: lambda { |group|
       if group == 'wd-my-net' then
         'WD (Western Digital)'
