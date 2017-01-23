@@ -29,20 +29,8 @@ touch tp-link-tl-wr2543n-nd_100x60.png
 mkdir large
 mv *jpg large/
 
-mv fronts/* /var/www/freifunk/ffki-startseite/images/models/
+ls fronts/*.png
+echo copy the mmissing images to /var/www/freifunk/ffki-startseite/images/models/
 ```
-
-Point the Webserver to this directory.
-For Apache add these lines:
-```
-	#Router Node Pictures
-	Alias /images/models/ /opt/hardware/Freifunk-Router-Anleitungen/router/fronts/
-	<Directory /opt/hardware/Freifunk-Router-Anleitungen/router/fronts/>
-		Options Indexes FollowSymLinks MultiViews
-		AllowOverride All
-		Require all granted
-		ExpiresByType image/png "access plus 1 week"
-		ExpiresByType image/jpeg "access plus 1 week"
-	</Directory>
-```
-to the ffki-startseite config.
+Some images still don't have the correct names and the 741/841/842 should not be
+replaced by the new Moorviper images. All images with "alfa" have to be renamed to "alfa-network".
