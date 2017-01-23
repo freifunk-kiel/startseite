@@ -33,6 +33,7 @@ layout: base
     <br/>
     <p>Derzeit werden noch nicht alle handelsüblichen Freifunk Router in der stabilen Version unserer Firmware unterstützt. Da diese jedoch ständig weiterentwickelt wird, findest du vielleicht die passende Version für deinen Router in unseren <a target="_blank" 
 	href="//freifunk.in-kiel.de/firmware/experimental/">Experimentals</a>.</p>
+    <p><strong>Aktuelle Firmware-Version: {{ site.firmware_version }}</strong></p>
   </div>
 </div>
 <div class="row">
@@ -66,11 +67,6 @@ layout: base
          </td>
        </tr>
    <table>
-  </div>
-  <div class="row">
-    <div class="eight columns">
-      <p><strong>Aktuelle Firmware-Version: {{ site.firmware_version }}</strong></p>
-    </div>
   </div>
 
     {% for groups in site.firmwares %}
