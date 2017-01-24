@@ -190,31 +190,17 @@ GROUPS = {
       end
     },
     transform_label: lambda { |model|
-      #if model == 'Bullet M' then
-      #  'Bullet M, Loco M'
-      #els
       if model == 'UniFi' then
         'UniFi AP (LR)'
-      elsif model == 'N600' then
-        'My Net N600'
-      elsif model == 'N750' then
-        'My Net N750'
       else
         model
       end
     },
-    transform_group: lambda { |group|
-      if group == 'wd-my-net' then
-        'WD (Western Digital)'
-      else
-        group
-      end
-    }
   },
-  "wd-my-net" => {
+  "WD" => {
     models: [
-      "N600",
-      "N750",
+      "My-Net-N600",
+      "My-Net-N750",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
