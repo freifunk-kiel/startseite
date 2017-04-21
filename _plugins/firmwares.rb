@@ -5,7 +5,7 @@ require 'pp'
 
 COMMUNITY_TLD = 'ffki'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-FIRMWARE_VERSION = '2016.2.1'
+FIRMWARE_VERSION = '2016.2.5'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
@@ -155,6 +155,7 @@ GROUPS = {
       "TL-WR841N/ND",
       "TL-WR842N/ND",
       "TL-WR843N/ND",
+      "TL-WR940N",
       "TL-WR940N/ND",
       "TL-WR941N/ND",
     ],
