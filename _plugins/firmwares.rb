@@ -9,8 +9,8 @@ FIRMWARE_VERSION = '2016.2.5'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
-FIRMWARE_BASE = 'http://freifunk.in-kiel.de/firmware/stable/'
-FIRMWARE_MIRROR = 'https://freifunk.in-kiel.de/firmware/stable/'
+FIRMWARE_BASE = 'https://freifunk.in-kiel.de/firmware/stable/'
+FIRMWARE_MIRROR = 'http://[fda1:384a:74de:4242::fd00]/firmware/stable/'
 
 GROUPS = {
   "8Devices" => {
