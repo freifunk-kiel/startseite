@@ -13,7 +13,8 @@ Dependencies
 * ruby2.0
 * bundler
 
-`bundle install`
+    gem install bundler
+    bundle install
 
 Customization
 -------------
