@@ -11,22 +11,9 @@ Dependencies
 ------------
 
 * ruby2.0
+* bundler
 
-### Gems
-
-* nokogiri
-* jekyll
-* json
-
-On Ubuntu/Debian:
-
-    sudo apt-get install ruby2.0 ruby2.0-dev ruby-nokogiri
-    sudo gem install json jekyll
-    ggf.:
-    RUBY_VERSION=2.1
-    ln -s /usr/bin/gem$RUBY_VERSION /usr/bin/gem
-    sudo chmod +x /usr/bin/gem
-    
+`bundle install`
 
 Customization
 -------------
