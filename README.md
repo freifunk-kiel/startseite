@@ -16,8 +16,8 @@ Dependencies
 Install
 -------
 
-    git clone <repo-url>
-    cd startseite
+    git clone <repo-url> startseite
+    cd startseite/
     git submodule update --init --recursive --remote
     gem install bundler
     bundle install
@@ -43,9 +43,13 @@ The complete directory structure of what (under Debian/Ubuntu) should reside und
 
 	jekyll build
 
-so it is stored in the local folder `build` outside of this repository. If something analogous to `rm -r /path/to/www; mv build /path/to/www` is no possible, you may decided for something like
+On Ubuntu you might need to ensure the right environment with
 
-	(cd build && tar cf - .)|(cd /path/to/www && sudo tar xf -)
+        bundle exec jekyll build
+
+The generated static pages will be stored in the subfolder `_site/`, that you should move somewhere outside of this repository. If something analogous to `rm -r /path/to/www; mv _site /path/to/www` is no possible, you may decided for something like
+
+	(cd _site && tar cf - .)|(cd /path/to/www && sudo tar xf -)
 
 to have the data transferred without deleting independent contributions.
 
@@ -66,4 +70,5 @@ Aftermath
 There are several bits and pieces still missing after the installation of this startseite. 
  * map/graph/List from the ffnord/ffmap-d3 repository on github
  * integration of the www-providing machine with the batman-adv mesh
- * mailing lists and email setup in general
+ * mailinglists and email setup in general
+ * ...
