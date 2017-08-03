@@ -16,6 +16,9 @@ Dependencies
 Install
 -------
 
+    git clone <repo-url>
+    cd <startseite>
+    git submodule update --init --recursive --remote
     gem install bundler
     bundle install
 
