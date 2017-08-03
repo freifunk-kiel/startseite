@@ -13,6 +13,9 @@ Dependencies
 * ruby2.0
 * bundler
 
+Install
+-------
+
     gem install bundler
     bundle install
 
