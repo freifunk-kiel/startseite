@@ -17,7 +17,7 @@ Install
 -------
 
     git clone <repo-url>
-    cd <startseite>
+    cd startseite
     git submodule update --init --recursive --remote
     gem install bundler
     bundle install
