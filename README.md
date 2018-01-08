@@ -1,9 +1,9 @@
-Startseite der Community FreiFunk Nord.
+Startseite der Community FreiFunk Kiel.
 =======================================
 
-Webseite: http://www.ffnord.net/blog.html
+Webseite: http://freifunk.in-kiel.de/blog
 
-Um einen Blog Beitrag zu erstellen brauchst du keine weitere Software. Das Blog kannst du **direkt im Browser [hier auf Github](https://github.com/ffnord/nord-blog) bearbeiten**. 
+Um einen Blog Beitrag zu erstellen brauchst du keine weitere Software. Das Blog kannst du **direkt im Browser [hier auf Github](https://github.com/freifunk-kiel/ffki-blog/) bearbeiten**. 
 
 Um die Hauptseiten zu bearbeiten, clone dises Repository und installiere ein paar Abhngigkeiten, dann kannst du auch bei dir lokal eine Kopie erstellen und testen:
 
