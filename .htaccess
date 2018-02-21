@@ -1,0 +1,7 @@
+<FilesMatch "index.html">
+    Header add Link "</stylesheets/foundation.min.css>; rel=preload; as=style"
+    Header add Link "</stylesheets/app.css>; rel=preload; as=style"
+    Header add Link "</javascripts/modernizr.foundation.js>; rel=preload; as=script"
+    Header add Link "</javascripts/jquery.js>; rel=preload; as=script"
+    Header add Link "</javascripts/foundation.min.js>; rel=preload; as=script"
+</FilesMatch>
