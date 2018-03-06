@@ -16,13 +16,14 @@ layout: base
     <p>	Bei fragen, komme in den IRC Chat hackint.org #ffki oder in unseren <a href="{{ site.community.url_webchat }}">Webchat</a>.
     </p>
     
-    <p>Diese Firmware ist für alle Freifunker in Kiel und naher Umgebung. Wer außerhalb Kiels wohnt, installiert bitte die Firmware aus <a href="http://nord.freifunk.net">Freifunk Nord</a>.
+    <p>Diese Firmware ist für alle Freifunker in Kiel und naher Umgebung. Wer außerhalb Kiels wohnt, installiert bitte die Firmware
+      aus <a href="https://nord.freifunk.net/firmware_select.html">Freifunk Nord</a>.
     </p>
     <h4>Häufigste Modelle</h4>
       <ul>
         <li><a href="/firmware.html#TP-Link_TL-WR841N/ND">TL-WR841N/ND</a> (Nicht mehr empfohlen!)</li>
           <li><a href="/firmware.html#TP-Link_TL-WR842N/ND">TL-WR842N/ND</a></li>
-        <li><a href="/firmware.html#TP-Link_TL-WR1043N/ND">TL-WR1043N/ND v2 bis v4</a> (<b>Empfohlen!</b> Achtung, die Version 5 wird noch nicht unterstützt)</li>
+        <li><a href="/firmware.html#TP-Link_TL-WR1043N/ND">TL-WR1043N/ND v2 bis v4</a> (<b>Empfohlen!</b> Version 5 noch experimentell)</li>
         <li><a href="/firmware.html#TP-Link">CPE210 v1.0/v1.1</a> (Achtung! nur Version 1 wird unterstützt)</li>      
       </ul>
     
@@ -33,12 +34,12 @@ layout: base
     <br/>
     <p>Derzeit werden noch nicht alle handelsüblichen Freifunk Router in der stabilen Version unserer Firmware unterstützt. Da diese jedoch ständig weiterentwickelt wird, findest du vielleicht die passende Version für deinen Router in unseren <a target="_blank" 
 	href="//freifunk.in-kiel.de/firmware/">Experimentals</a>.</p>
-    <p><strong>Aktuelle Firmware-Version: {{ site.firmware_version }}</strong></p>
+    <p><h5>Aktuelle Firmware-Version: {{ site.firmware_version }}</h5></p>
   </div>
 </div>
 <div class="row">
-  <!--div class="eight columns">
-    <h2>TP-Link TL-CPE210 (beta)</h2>
+  <div class="eight columns">
+    <h2>TP-Link TL-WR1043N v5 (nightly)</h2>
     <table class="firmwarelist">
       <thead>
         <tr>
@@ -50,29 +51,30 @@ layout: base
       </thead>
       <tbody>
         <tr>
-          <td class="router" style="background-image:url(images/models/tp-link-cpe210_100x60.png)">
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr1043n-nd_100x60.png)">
           </td>
           <td>
             TL-CPE210
           </td>
           <td>
-            <strong>v1.1 EU:</strong>
-           <a href="https://freifunk.in-kiel.de/firmware/experimental/factory/gluon-ffki-2016.2.2~exp1701011934-tp-link-cpe210-v1.1.bin">Firmware</a>
-           <br>
-         </td>
-         <td>
-           <strong>v1.1 EU:</strong>
-           <a href="https://freifunk.in-kiel.de/firmware/experimental/sysupgrade/gluon-ffki-2016.2.2~exp1701011934-tp-link-cpe210-v1.1-sysupgrade.bin">Upgrade</a>
-           <br>
-         </td>
-       </tr>
-   <table>
-  </div-->
+            <strong>v5:</strong>
+            <a href="//freifunk.in-kiel.de/firmware/nightly/">Firmware</a>
+            <br>
+          </td>
+          <td>
+            <strong>v5:</strong>
+            <a href="//freifunk.in-kiel.de/firmware/nightly/">Upgrade</a>
+            <br>
+          </td>
+        </tr>
+      </tbody>
+    <table>
+  </div>
 
   <div class="eight columns">
     {% for groups in site.firmwares %}
-    <a name="{{ groups[0] }}"></a>
-    <h2>{{ groups[0] }}</h2>
+    <h3><a name="{{ groups[0] }}"></a>
+    {{ groups[0] }}</h3>
     <table class="firmwarelist">
       <thead>
         <tr>
