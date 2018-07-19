@@ -5,6 +5,7 @@ require 'pp'
 
 COMMUNITY_TLD = 'ffki'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
+#FIRMWARE_VERSION = '2018.1~exp-215'
 FIRMWARE_VERSION = '2016.2.7'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
@@ -12,12 +13,19 @@ FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-'
 #jekyll 2.2.0 | Error:  hostname "freifunk.in-kiel.de" does not match the server certificate  
 #FIRMWARE_BASE = 'https://freifunk.in-kiel.de/firmware/stable/'
 FIRMWARE_BASE = 'http://freifunk.in-kiel.de/firmware/stable/'
+#FIRMWARE_BASE = 'http://freifunk.in-kiel.de/firmware/release-candidate/'
 FIRMWARE_MIRROR = 'http://[fda1:384a:74de:4242::fd00]/firmware/stable/'
 
 GROUPS = {
   "8Devices" => {
     models: [
       "Carambola2-Board",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "AVM" => {
+    models: [
+      "FRITZ-BOX-4020",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -69,6 +77,8 @@ GROUPS = {
   "GL" => { #this one is also GL.inet
     models: [
       "AR150",
+      "AR300M",
+      "AR750",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
@@ -120,6 +130,8 @@ GROUPS = {
   },
   "OpenMesh" => {
     models: [
+      "A40",
+      "A60",
       "MR600",
       "MR900",
       "OM2P",
@@ -142,11 +154,18 @@ GROUPS = {
   "TP-Link" => {
     models: [
       "ARCHER-C5",
+      "ARCHER-C59",
       "ARCHER-C7",
       "CPE210",
       "CPE220",
       "CPE510",
       "CPE520",
+      # geht nicht wegen keiner version: "RE450",
+      "TL-WA7210N",
+      "TL-WA730RE",
+      "TL-WR1043N",
+      "WBS210",
+      "WBS510",
       "TL-MR13U",
       "TL-MR3020",
       "TL-MR3040",
@@ -178,7 +197,7 @@ GROUPS = {
       "TL-WR940N/ND",
       "TL-WR941N/ND",
     ],
-    extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+    extract_rev: lambda { |model, suffix| rev = /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "Ubiquiti" => {
     models: [
@@ -345,6 +364,8 @@ module Jekyll
       sysupgrade = get_files(FIRMWARE_BASE + "sysupgrade/")
 
       factory.each do |href|
+	# for debugging:
+	#puts "search " + href
         basename = find_prefix href
         if basename.nil? then
           puts "error in "+href
