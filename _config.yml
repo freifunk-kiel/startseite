@@ -47,6 +47,10 @@ firmware:
   # Path to local checkout of the site repo
   gluon_site_dir: "/opt/ffki-site/"
 
+gluon_site:
+  wifi24:
+    ssid: "http://kiel.freifunk.net/"
+
 tld:
   label: "ffki"
   ns:
