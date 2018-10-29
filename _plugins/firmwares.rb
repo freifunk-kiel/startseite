@@ -17,7 +17,7 @@ FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-'
 #FIRMWARE_BASE = site.config['firmware']['base']
 #jekyll 2.2.0 | Error:  hostname "freifunk.in-kiel.de" does not match the server certificate  
 #FIRMWARE_BASE = 'https://freifunk.in-kiel.de/firmware/stable/'
-FIRMWARE_BASE = 'http://freifunk.in-kiel.de/firmware/stable/'
+FIRMWARE_BASE = 'https://freifunk.in-kiel.de/firmware/stable/'
 #FIRMWARE_BASE = 'http://freifunk.in-kiel.de/firmware/release-candidate/'
 FIRMWARE_MIRROR = 'http://[fda1:384a:74de:4242::fd00]/firmware/stable/'
 
@@ -230,18 +230,30 @@ GROUPS = {
   "Ubiquiti" => {
     models: [
       "Airgateway",
+      "Airgateway LR",
+      "Airgateway Pro",
       "Airrouter",
+      "Bullet M",
+      "Bullet M2",
+      "Bullet M5",
       "Loco M",
       "Nanostation-Loco M2",
       "Nanostation-Loco M5",
-      "Bullet M",
       "LS-SR71", #LiteStation-SR71
       "Nanostation M",
+      "Nanostation M2",
       "Nanostation M5",
-      "Picostation M",
+      "Picostation M2",
       "Rocket M",
-      "Rocket M XW",
+      "Rocket M2",
+      "Rocket M5",
+      "UniFi AC Lite",
+      "UniFi AC LR",
+      "UniFi AC Mesh",
+      "UniFi AC Pro",
+      "UniFi AP LR",
       "UniFi AP Pro",
+      "UniFi AP",
       "UniFi",
       "UniFiAP Outdoor",
     ],
@@ -250,19 +262,23 @@ GROUPS = {
 
       if rev == '-xw'
         'XW'
-      elsif model == 'Nanostation M' or model == 'Loco M' or model == 'Nanostation-Loco M' or model == 'Bullet M'
+      elsif rev == '-xm'
         'XM'
+      elsif rev == '-ti'
+        'TI'
+      elsif rev == '+'
+        '+'
       else
         nil
       end
     },
-    transform_label: lambda { |model|
-      if model == 'UniFi' then
-        'UniFi AP (LR)'
-      else
-        model
-      end
-    },
+    # transform_label: lambda { |model|
+    #   if model == 'UniFi' then
+    #     'UniFi AP (LR)'
+    #   else
+    #     model
+    #   end
+    # },
   },
   "VoCore" => {
     models: [
