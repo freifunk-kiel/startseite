@@ -17,7 +17,8 @@ FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-'
 #FIRMWARE_BASE = site.config['firmware']['base']
 #jekyll 2.2.0 | Error:  hostname "freifunk.in-kiel.de" does not match the server certificate  
 #FIRMWARE_BASE = 'https://freifunk.in-kiel.de/firmware/stable/'
-FIRMWARE_BASE = 'https://freifunk.in-kiel.de/firmware/stable/'
+# dies muss http bleiben, sonst kann jekyll das lokal nicht runterladen
+FIRMWARE_BASE = 'http://freifunk.in-kiel.de/firmware/stable/'
 #FIRMWARE_BASE = 'http://freifunk.in-kiel.de/firmware/release-candidate/'
 FIRMWARE_MIRROR = 'http://[fda1:384a:74de:4242::fd00]/firmware/stable/'
 
@@ -421,7 +422,7 @@ module Jekyll
 	#puts "search " + href
         basename = find_prefix href
         if basename.nil? then
-          puts "error in "+href
+          puts "cannot associate "+href
         else
           suffix = href[basename.length..-1]
           info = firmwares[basename]
@@ -437,7 +438,7 @@ module Jekyll
       sysupgrade.each do |href|
         basename = find_prefix href
         if basename.nil? then
-          puts "error in "+href
+          puts "cannot assosiate "+href
         else
           suffix = href[basename.length..-1]
           info = firmwares[basename]
