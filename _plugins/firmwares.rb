@@ -8,6 +8,7 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
+######### Configuration ##############
 COMMUNITY_TLD = 'ffki'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
 #FIRMWARE_VERSION = '2018.1~exp-215'
@@ -173,8 +174,11 @@ GROUPS = {
   },
   "TP-Link" => {
     models: [
+      "ARCHER-C25",
       "ARCHER-C5",
+      "ARCHER-C58",
       "ARCHER-C59",
+      "ARCHER-C60",
       "ARCHER-C7",
       "CPE210",
       "CPE220",
@@ -210,6 +214,8 @@ GROUPS = {
       "TL-WR740N/ND",
       "TL-WR741N/ND",
       "TL-WR743N/ND",
+      "TL-WR802N",
+      "TL-WR810N",
       "TL-WR841N/ND",
       "TL-WR842N/ND",
       "TL-WR843N/ND",
@@ -238,6 +244,7 @@ GROUPS = {
       "Bullet M2",
       "Bullet M5",
       "Loco M",
+      "Nanobeam M5",
       "Nanostation-Loco M2",
       "Nanostation-Loco M5",
       "LS-SR71", #LiteStation-SR71
@@ -306,6 +313,15 @@ GROUPS = {
       "64-VMware",
       "xen",
       "x86-64",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "x86-64" => {
+    models: [
+      "Generic",
+      "KVM",
+      "VirtualBox",
+      "VMware",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -378,6 +394,7 @@ module Jekyll
       end
 
       def find_prefix(name)
+        puts "Checking prefix for "+name
         @prefixes.each do |prefix|
           return prefix if prefix_of(prefix, name)
         end
@@ -417,6 +434,10 @@ module Jekyll
       factory = get_files(FIRMWARE_BASE + "factory/")
       sysupgrade = get_files(FIRMWARE_BASE + "sysupgrade/")
 
+      @prefixes.each do |prefix|
+         puts "Prefixes: " + prefix
+      end
+
       factory.each do |href|
 	# for debugging:
 	#puts "search " + href
@@ -438,7 +459,7 @@ module Jekyll
       sysupgrade.each do |href|
         basename = find_prefix href
         if basename.nil? then
-          puts "cannot assosiate "+href
+          puts "cannot assosiate sysupgrade "+href
         else
           suffix = href[basename.length..-1]
           info = firmwares[basename]
