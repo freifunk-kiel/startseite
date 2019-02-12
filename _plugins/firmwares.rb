@@ -394,7 +394,8 @@ module Jekyll
       end
 
       def find_prefix(name)
-        puts "Checking prefix for "+name
+        #for debugging
+        #puts "Checking prefix for "+name
         @prefixes.each do |prefix|
           return prefix if prefix_of(prefix, name)
         end
@@ -435,12 +436,13 @@ module Jekyll
       sysupgrade = get_files(FIRMWARE_BASE + "sysupgrade/")
 
       @prefixes.each do |prefix|
-         puts "Prefixes: " + prefix
+        # for debugging:
+        #puts "Prefixes: " + prefix
       end
 
       factory.each do |href|
-	# for debugging:
-	#puts "search " + href
+      	# for debugging:
+      	#puts "search " + href
         basename = find_prefix href
         if basename.nil? then
           puts "cannot associate "+href
