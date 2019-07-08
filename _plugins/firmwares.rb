@@ -12,7 +12,7 @@ require 'pp'
 COMMUNITY_TLD = 'ffki'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
 #FIRMWARE_VERSION = '2018.1~exp-215'
-FIRMWARE_VERSION = '2018.1.4-612'
+FIRMWARE_VERSION = '2018.2.2-747'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
