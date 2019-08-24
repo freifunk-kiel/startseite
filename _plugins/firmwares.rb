@@ -148,13 +148,19 @@ GROUPS = {
   },
   "NETGEAR" => {
     models: [
+      "EX6100V2",
+      "EX6150V2",
+      "R6120",
       "WNDR3700",
+      "WNDR3700V2",
+      "WNDR3700V4",
       "WNDR3800",
       "WNDR4300",
       "WNDRMAC",
+      "WNDRMACV2",
       "WNR2200", # nur sysupgrade
     ],
-    extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
+    extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'Error: bitte im Quellordner schauen') },
   },
   "Onion" => {
     models: [
@@ -348,6 +354,7 @@ GROUPS = {
   },
   "Zyxel" => {
     models: [
+      "nbg6617",
       "nbg6716",
     ],
     extract_rev: lambda { |model, suffix| nil },
