@@ -1,4 +1,4 @@
-_site/
-build/
+/_site/
+/build/
 Gemfile.lock
 
