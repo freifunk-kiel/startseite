@@ -1,4 +1,4 @@
-url: http://freifunk.in-kiel.de/
+url: https://freifunk.in-kiel.de/
 
 destination: _site
 
@@ -10,11 +10,11 @@ community:
 
   # Custom URLs
   url_wiki:  "https://wiki.freifunk.in-kiel.de/"
-  url_webchat: "https://riot.eclabs.de/#/room/#freifunk-kiel:matrix.eclabs.de"
+  url_webchat: "https://element.eclabs.de/#/room/#freifunk-kiel:matrix.eclabs.de"
   #url_geomap:
   url_graph: "https://grafana.freifunk.in-kiel.de/"
   #url_nodelist:
-  url_meshviewer: "http://mesh.freifunk.in-kiel.de/"
+  url_meshviewer: "https://mesh.freifunk.in-kiel.de/"
 
   url_mailman: "https://lists.in-kiel.de/cgi-bin/mailman/listinfo/freifunk"
 
@@ -38,7 +38,7 @@ community:
   geo_lon: 10.1
 
 firmware:
-  base: "http://freifunk.in-kiel.de/firmware/stable/"
+  base: "https://freifunk.in-kiel.de/firmware/stable/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
