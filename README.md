@@ -25,8 +25,8 @@ Install
 
 On Ubuntu/Debian:
 
-    sudo apt-get install ruby2.5-dev ruby-nokogiri rubygems
-    sudo apt purge ruby2.0* ruby2.1 ruby2.3 ruby2.4*
+    sudo apt-get install ruby2.7-dev ruby-nokogiri rubygems libc6-dev g++
+    sudo apt purge ruby2.0* ruby2.1 ruby2.3 ruby2.4* ruby2.5*
     sudo gem install json jekyll bundler
     #ggf.:
     #ln -s /usr/bin/gem$VERSION$ /usr/bin/gem
@@ -34,6 +34,7 @@ On Ubuntu/Debian:
     git clone <repo-url> startseite
     cd startseite/
     git submodule update --init --recursive --remote
+    bundle update
     bundle install
 
 Customization
