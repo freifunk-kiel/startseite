@@ -11,8 +11,9 @@ require 'pp'
 ######### Configuration ##############
 COMMUNITY_TLD = 'ffki'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-#FIRMWARE_VERSION = '2018.1~exp-215'
-FIRMWARE_VERSION = '2018.2.4-925'
+# die geht noch: FIRMWARE_VERSION = '2018.2.4-925'
+#die nicht:
+FIRMWARE_VERSION = '2020.2.3.1244'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
@@ -435,7 +436,8 @@ module Jekyll
       firmwares = Hash[GROUPS.collect_concat { |group, info|
         info[:models].collect do |model|
           basename = FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-' + sanitize_model_name(group + ' ' + model)
-          #print basename
+          #for debugging
+          #puts basename
           label = if info[:transform_label] then
                     info[:transform_label].call model
                   else
