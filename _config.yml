@@ -10,7 +10,7 @@ community:
 
   # Custom URLs
   url_wiki:  "https://wiki.freifunk.in-kiel.de/"
-  url_webchat: "https://app.element.io/#/room/#freifunk-kiel:matrix.eclabs.de"
+  url_webchat: "https://chat.tchncs.de/#/room/#freifunk-kiel:matrix.eclabs.de"
   #url_geomap:
   url_graph: "https://grafana.freifunk.in-kiel.de/"
   #url_nodelist:
