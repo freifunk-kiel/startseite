@@ -24,13 +24,14 @@ community:
   url_nodealarm: "https://freifunk.discovibration.de/freifunk-nodewatcher.php"
 
   # Mail Contacts
-  mail_info: "freifunk@lists.in-kiel.de"
+  mail_info: "freifunk@lists.in-kiel.de (Die Mail ist auch im Webchat lesbar)"
   mail_keys: "freifunk-keys@lists.in-kiel.de"
-  mail_discussion: "freifunk@lists.in-kiel.de"
+  mail_discussion: "freifunk@lists.in-kiel.de (Die Mail ist auch im Webchat lesbar)"
 
   # Other Contacts
   #sip: ["space@sip.ffki"] # Optional
   twitter: "ff_Kiel" # Optional
+  fediverse: "" #optional
   irc: "ffki"
 
   # GPS
@@ -38,8 +39,13 @@ community:
   geo_lon: 10.1
 
 firmware:
-  base: "https://freifunk.in-kiel.de/firmware/stable/"
   type: "gluon"
+  base: "https://freifunk.in-kiel.de/firmware/stable/"
+  version: "2020.2.3-1244"
+  base_rc: "https://freifunk.in-kiel.de/firmware/release-candidate/"
+  version_rc: "2021.1.2-1365"
+  base_nightly: "https://freifunk.in-kiel.de/firmware/nightly/"
+  version_nightly: "2021.1.2-1250"
 
   # URL to the site repo (gitweb,github...)
   gluon_site: "https://gitlab.toppoint.de/ffki/ffki-site/"
