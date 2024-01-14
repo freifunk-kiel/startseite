@@ -24,10 +24,11 @@ community:
   url_nodealarm: "https://freifunk.discovibration.de/freifunk-nodewatcher.php"
 
   # Mail Contacts
-  mail_info: "freifunk@lists.in-kiel.de (Die Mail ist auch im Webchat lesbar)"
+  mail_info: "freifunk@lists.in-kiel.de"
   mail_keys: "freifunk-keys@lists.in-kiel.de"
-  mail_discussion: "freifunk@lists.in-kiel.de (Die Mail ist auch im Webchat lesbar)"
-
+  mail_discussion: "freifunk@lists.in-kiel.de"
+  dsgvo: "Alle Kommunikation ist &ouml;ffentlich zug&auml;nglich"
+  
   # Other Contacts
   #sip: ["space@sip.ffki"] # Optional
   twitter: "ff_Kiel" # Optional
