@@ -87,8 +87,9 @@
       <div class="six columns">
         <h5>Kontakt</h5>
         <p>
-        <strong>E-Mail:</strong> <a href="mailto:{{ site.community.mail_info}}">{{ site.community.mail_info }}</a> <br/>
-        <strong>Mailingliste:</strong> <a href="{{ site.community.url_mailman }}">{{ site.community.mail_discussion }}</a> <br/>
+          <strong>E-Mail:</strong> <a href="mailto:{{ site.community.mail_info}}">{{ site.community.mail_info }}</a> <br/>
+          <strong>Mailingliste:</strong> <a href="{{ site.community.url_mailman }}">{{ site.community.mail_discussion }}</a> <br/>
+          {{ site.community.dsgvo }} <br/>
           {% if site.community contains 'sip' %}
           <strong>SIP:</strong>
             {% for sip in site.community.sip %}
